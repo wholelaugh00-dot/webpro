@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: black;
+    --gold: gold;
+    --cream:#cfb592;
+    --brown: brown;
+    --white: white;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background: var(--cream);
+    color: var(--black);
+}
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url("tsehays.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.35); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content .left {
+    background: rgba(255, 255, 255, 0.65);
+    padding: 25px 35px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+
+nav.show-desktop {
+    display: flex;
+    gap: 20px;        
+}
+
+nav.show-desktop a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+
+    background: palevioletred;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    transition: 0.2s ease;
+}
+
+nav.show-desktop a:hover {
+    background:goldenrod;  
+    color:black;
+}.hero {
+    width: 100%;
+    height: auto; 
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding-top: 40px;
+}
+
+.hero-content .left {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.hero-content .center img {
+    width: 100%;
+    height: 500px;     
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+.left h1 {
+    font-family: "Playfair Display";
+    font-size: 3em;
+    margin-bottom: .5em;
+    color: var(--gold);
+}
+
+.left p {
+    margin-bottom: 1em;
+}
+
+button {
+    background: var(--gold);
+    padding: .8em 2em;
+    border: none;
+    color: var(--black);
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+}
+
+.hero-content .right {
+    width: 50%;
+}
+
+.hero-content .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4em 2em;
+}
+
+.ratings-list {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.rating-item {
+    border-left: 3px solid var(--gold);
+    padding-left: 1em;
+    min-width: 220px;
+}
+
+.rating-num {
+    font-size: 3em;
+    font-family: "Playfair Display";
+    color: var(--brown);
+}
+
+.features h2 {
+    font-family: "Playfair Display";
+    color: var(--brown);
+    margin-bottom: 1em;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5em;
+}
+
+.feature-card {
+    background: white;
+    border-left: 5px solid var(--gold);
+    padding: 1.5em;
+    font-weight: 500;
+}
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.feature-card img {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.designer h2, .awards h2, .videos h2 {
+    font-family: "Playfair Display";
+    color: var(--brown);
+    margin-bottom: 1em;
+}
+
+.award-list {
+    list-style: none;
+}
+
+.award-list li {
+    margin-bottom: .7em;
+    padding-left: 1em;
+    border-left: 3px solid var(--gold);
+}
+
+.video-row {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.video-row iframe {
+    width: 320px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.contact-box {
+    background-color:burlywood;   
+    padding: 6px 1px;
+    text-align: center;
+}
+.contact button {
+    background-color:aliceblue; 
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color:black;
+}
+footer {
+    background-color:black; 
+    color:whitesmoke;
+    text-align: center;
+    padding: 10px;
+}
+
+
