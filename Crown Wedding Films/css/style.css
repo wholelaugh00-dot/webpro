@@ -1,0 +1,139 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.logo-fixed {
+    position: fixed;
+    top: 15px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2000;
+    color: white;
+}
+
+.logo-fixed img {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffeb3b;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background-image: url("../Image/Hero.jpg");
+    background-size: cover;
+    background-position: center center; /* Adjust position to focus on main part */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-image: url("../Image/TextBg.jpg");
+    background-size: cover;
+    background-position: center center; /* Adjust to show proper part */
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Hero text typography */
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Main sections */
+main section {
+    padding: 40px 50px;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* slightly smaller images */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px; /* fixed height for uniformity */
+    object-fit: cover; /* crop image nicely */
+    border-radius: 8px;
+}
+
+/* Video */
+.video-section video {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 20px auto; /* center video */
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
