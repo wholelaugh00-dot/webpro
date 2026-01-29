@@ -1,7 +1,9 @@
+/* General */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
 .logo-fixed {
     position: fixed;
     top: 15px;
@@ -49,11 +51,12 @@ body {
     color: #ffeb3b;
 }
 
+/* Hero Section */
 .hero {
     height: 80vh;
     background-image: url("../Image/Hero.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: center center; /* Adjust position to focus on main part */
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -83,11 +86,12 @@ body {
     border-radius: 10px;
     background-image: url("../Image/TextBg.jpg");
     background-size: cover;
-    background-position: center center; 
+    background-position: center center; /* Adjust to show proper part */
     background-repeat: no-repeat;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
+/* Hero text typography */
 .hero-text h2 {
     font-size: 36px;
     margin-bottom: 10px;
@@ -103,9 +107,10 @@ main section {
     padding: 40px 50px;
 }
 
+/* Gallery */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* slightly smaller images */
     gap: 15px;
     margin-top: 20px;
 }
@@ -117,6 +122,7 @@ main section {
     border-radius: 8px;
 }
 
+/* Video */
 .video-section video {
     width: 100%;
     max-width: 700px;
@@ -131,4 +137,3 @@ footer {
     padding: 15px;
     font-size: 14px;
 }
-
