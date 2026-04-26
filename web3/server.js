@@ -11,12 +11,10 @@ if (fs.existsSync("movies.json")) {
 const server = http.createServer((req, res) => {
   res.setHeader("Content-Type", "application/json");
 
-  // GET
   if (req.method === "GET" && req.url === "/movies") {
     res.end(JSON.stringify(movies));
   }
 
-  // POST
   else if (req.method === "POST" && req.url === "/movies") {
     let body = "";
 
@@ -39,7 +37,6 @@ const server = http.createServer((req, res) => {
     });
   }
 
-  // DELETE ✅ FIXED (MOVED INSIDE)
   else if (req.method === "DELETE" && req.url.startsWith("/movies/")) {
     const movieId = parseInt(req.url.split("/")[2]);
 
@@ -49,7 +46,6 @@ const server = http.createServer((req, res) => {
     res.end(JSON.stringify({ message: "Deleted" }));
   }
 
-  // NOT FOUND
   else {
     res.statusCode = 404;
     res.end(JSON.stringify({ message: "Not found" }));
