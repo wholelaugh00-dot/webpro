@@ -39,6 +39,17 @@ const server = http.createServer((req, res) => {
     });
   }
 
+  // DELETE ✅ FIXED (MOVED INSIDE)
+  else if (req.method === "DELETE" && req.url.startsWith("/movies/")) {
+    const movieId = parseInt(req.url.split("/")[2]);
+
+    movies = movies.filter(m => m.id !== movieId);
+    fs.writeFileSync("movies.json", JSON.stringify(movies));
+
+    res.end(JSON.stringify({ message: "Deleted" }));
+  }
+
+  // NOT FOUND
   else {
     res.statusCode = 404;
     res.end(JSON.stringify({ message: "Not found" }));
