@@ -1,1 +1,13 @@
-[]
+
+[
+  {
+    "id": 1,
+    "title": "The Lion King",
+    "genre": "Animation"
+  },
+  {
+    "id": 2,
+    "title": "Frozen",
+    "genre": "Disney"
+  }
+]
